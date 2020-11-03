@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body { font-weight: bold; font-size: 12pt; background-color: grey;}
+	/*
+		static은 순차적으로 위취가 조절되고
+		relative는 top, left, right, bottom으로 위치 조절이 가능하다
+		absolute는 body를 기준으로 위치가 움직인다
+	*/
+	.span1 { background-color: yellow; position: absolute; top: 5px;}
+	.span2 { background-color: red; position: absolute; left: 10px;}
+	.span3 { background-color: pink; position: absolute; top: -5px;}
+	.div { background-color: skyblue;}
+</style>
+</head>
+<body>
+	<div style="background-color: green;">position</div>
+	<span class="span1">span1</span>
+	<span class="span2">span2</span>
+	<span class="span3">span3</span>
+	<div class="div">기본 값은 ststic 입니다</div>
+</body>
+</html>
