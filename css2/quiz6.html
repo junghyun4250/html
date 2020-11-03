@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#wrap{
+		width:500px; margin:0 auto; display:flex;flex-flow:column; 
+        height:500px; border-style: solid;
+	}
+	#main_header { order: 1; height:20%; text-align:center; background-color: red;}
+	#main_nav { order: 2; height:15%; text-align: center; background: gold;}
+	.section { order: 3; height: 50%; display:flex;}
+	.main_footer { order: 4; height: 15%; background: pink;}
+	
+	.section section { order: 1; width: 70%; height: 100%; background: green;}
+	.section aside { order: 2; width: 30%; height: 100%; background: skyblue;}
+	 #tag {margin: 10px; border-style: solid; text-align:center; background:pink;}
+	 h3,h4{ text-align:center; }
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<header id="main_header"><h3>< header ></h3></header>
+		<nav id="main_nav"><h4>< nav ></h4></nav>
+		<div class="section">
+			 <section>
+	            <h3>< section1 ></h3>
+	            <header id="tag">header</header>
+	            <article id="tag">article</article>
+	            <footer id="tag">footer</footer>
+	        </section>
+	        <aside>
+	        	<h3>< aside ></h3>
+	        </aside>  
+		</div>
+		<footer class="main_footer"><h3>< footer ></h3></footer>
+	</div>
+</body>
+</html>

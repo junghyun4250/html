@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#wrap { width: 960px; margin: 0 auto;}
+	.header { height: 100px; display: flex; flex-flow: row;}
+	.nav { height: 50px; background-color: grey;}
+	.div { height: 500px; display: flex; flex-flow: row;}
+	.footer {height: 100px;}
+	
+	ul li{ display: inline; padding-left: 15px;}
+	
+	.article { width: 30%; height: 500px; display: flex; flex-flow: column;}
+	.section { width: 50%; height: 500px;}
+	.aside { width: 20%; height: 500px;}
+	.section div { display: flex; flex-flow: row;}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<header class="header">
+			<img src="quiztime.png" width="100px" height="100px">
+			<div style="margin: 0 auto">
+			<font size="7"><i><b>맛 집 탐 방</b></i></font>
+			</div>
+		</header>
+		<nav class="nav">
+			<ul>
+				<li><a href="">HOME</a></li>
+				<li><a href="">게시판</a></li>
+				<li><a href="">내정보</a></li>
+			</ul>
+		</nav>
+		<div class="div">
+			<article class="article">
+				<img src="quiztime.png" width="80%" height="50%">
+				<img src="quiztime.png" width="80%" height="50%">
+			</article>
+			<section class="section">
+				<h3>아무내용</h3>
+				<div>
+					<h5 style="width: 300px">아무내용 아무내용 아무내용 아무내용 아무내용 아무내용 아무내용</h5>
+					<img src="quiztime.png" width="50px" height="50px" >
+				</div>
+				<div>
+					<h5 style="width: 300px">아무내용 아무내용 아무내용 아무내용 아무내용 아무내용 아무내용</h5>
+					<img src="quiztime.png" width="50px" height="50px">
+				</div>
+				<div>
+					<h5 style="width: 300px">아무내용 아무내용 아무내용 아무내용 아무내용 아무내용 아무내용</h5>
+					<img src="quiztime.png" width="50px" height="50px">
+				</div>
+			</section>
+			<aside class="aside">aside</aside>
+		</div>
+		<footer class="footer">footer</footer>
+	</div>
+</body>
+</html>

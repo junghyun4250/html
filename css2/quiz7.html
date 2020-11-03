@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <style>
+        .wrap{
+       			display:flex;flex-flow:column;
+        		width:600px;height:600px;margin:0 auto; overflow:hidden;
+        	}
+        .main_header{ order:1; display: flex; height:30%; }
+        .margin{ margin:25px 50px; }
+        .main_img { 
+        		box-shadow: 5px 5px 10px #000;
+		        width:100px;height:100px; 
+		    }      
+        #main_nav { order: 2; height:15%;}        
+        ul{
+        height:50%; padding-top:10px;
+		background-color: grey;
+		text-align:left; overflow:hidden;
+		}
+		li{
+		text-align:center; height:100px;
+		padding: 20px 20px 20px 20px;
+		color: white; font-size:16px;
+		list-style: none; display: inline;
+		}
+		
+		.section{order:2; display:flex; height:60%; }
+        .section nav {order:1;display:flex; flex-flow:column;
+	         width:20%; height:100%;}
+        .msg { position:relative; text-align:center; top:-100px; }
+        .title { float: left;}
+        
+        .aside {  order:3;display:flex; flex-flow:column;
+                 margin:0 auto; width:30%; height:100%; }
+        .login { order:1; display:flex; width:100%; height:25%; }
+        .button{height:100%; width:50%;}
+        
+        .section section {order:2; width:50%; height:100%; }
+        .section aside { order:3; width:25%; height:100%; }
+        footer {order:4;  height:20%; }
+        
+    </style>
+</head>
+<body>
+	<div class="wrap">		
+        <header class="main_header">        
+        <h1 style="height:100%; width:20%;">
+        <img src="quiztime.png" class="main_img">
+        </h1>
+        <h1 style="height:100%;" class="margin"><i> 맛집탕방 이야기 ^^ </i></h1>
+        </header>
+        <nav id="main_nav">
+        	<ul>
+        		<li>HOME</li>
+        		<li>게시판</li>
+        		<li>내정보</li>
+        	</ul>
+        </nav>
+        <div class="section">
+        <nav>
+        	<div>
+        		<img src="quiztime.png" style="width:110px;height:120px;">
+        	</div>
+        	<div style="height:50%;">
+        		<img src="quiztime.png" style="width:110px;height:120px;" align="middle">        	
+	        	<div class="msg" style="width:100px;">
+					<b>맛집 장터</b><br>맛집 이야기 시작 합니다.
+				</div>
+        	</div>
+        </nav>
+        <aside class="aside">
+        	<div class="login">
+				<div style="width:100%;">
+					<input style="height:50%; width:100%;" type="text">
+			        <input style="height:50%; width:100%;" type="text">
+	            </div>
+	           		 <button class="button" >로그인</button>
+		    </div>
+        </aside>
+        <section>
+            <h3>< 오늘의 맛집 ></h3>
+	            <div>
+	            	<div class="title" style="width:80%;align:left;">
+	            	오늘 방문한 곳은 맛있는 음식이 나오는 집.
+	            	</div>
+		            <img style="width:50px;height:50px; "src="quiztime.png">
+	            </div>
+            	<div>
+	            	<div class="title" style="width:80%;align:left;">
+	            	오늘 방문한 곳은 맛있는 음식이 나오는 집.
+	            	</div>
+		            <img style="width:50px;height:50px; "src="quiztime.png">
+	            </div>
+	            <div>
+	            	<div class="title" style="width:80%;align:left;">
+	            	오늘 방문한 곳은 맛있는 음식이 나오는 집.
+	            	</div>
+		            <img style="width:50px;height:50px; "src="quiztime.png">
+	            </div>
+        </section>
+        </div>
+        <footer><h3>&lt; footer &gt;</h3></footer>
+    </div>
+</body>
+</html>
