@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#wrap{display: flex; flex-flow: column; width: 300px; height: 400px;}
+	footer{background-color: pink; text-align:center; width: 300px; height: 10%;}
+</style>
+	<script type="text/javascript">
+		var num = 1
+		function next(){			
+			num++
+			if(num >8)
+				num = 1
+			img = "images/최근상품0"+num+".jpg"
+			document.getElementById('myImage').src=img			
+		}
+		function previous(){			
+			num--
+			if(num<1)
+				num=8;
+			img = "images/최근상품0"+num+".jpg"
+			document.getElementById('myImage').src=img
+		}
+	</script>
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<img id="myImage" src="images/최근상품01.jpg" width="300px" height="300px">
+	</header>
+	<footer>
+	<input type="button" onclick="previous()" value="이전사진">
+	<input type="button" onclick="next()" value="다음사진">
+	</footer>
+</div>
+</body>
+</html>
