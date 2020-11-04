@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+	<script type="text/javascript">
+	x = 5; 
+	y = "5";
+	/* 
+	2개로 비교할떄 타입은 신경쓰지 않고 값만보고 비교해줍니다
+	3개로 비교할때는 타입과 값까지 같이 비교합니다
+	*/
+	console.log(x == y)/* 값은 같다 */
+	console.log(x != y)/* 값은 다르다 */
+	console.log(x === y)/* 타입은 같고 값도 같다 */
+	console.log(x !== y)/* 타입은 다르고 값은 같다 */
+	
+	document.write("100 : " + typeof 100 + "<br>")
+	document.write("'100' : " + typeof '100' + "<br>")
+	document.write("[1,2,3,] : " + typeof [1,2,3,] + "<br>")
+	document.write("{1:11, 2:22} : " + typeof {1:11, 2:22} + "<br>")
+	</script>
+ -->
+ <!--
+ 	<script type="text/javascript">
+ 		gender = 'M'
+ 		if(gender == 'M'){
+ 			result = "남성입니다"
+ 		}else{
+ 			result = "여성입니다"
+ 		}
+ 		document.write(result)
+ 	</script>
+ -->
+ <!-- 
+ 	<script type="text/javascript">
+ 		week = new Date().getDay(); //0 ~ 6(일 ~ 토)
+ 		switch(week){
+ 		case 0:
+ 			day = '일요일';
+ 			break; 		
+ 		case 1:
+ 			day = '월요일';
+ 			break; 		
+ 		case 2:
+ 			day = '화요일';
+ 			break; 		
+ 		case 3:
+ 			day = '수요일';
+ 			break; 		
+ 		case 4:
+ 			day = '목요일';
+ 			break; 		
+ 		case 5:
+ 			day = '금요일';
+ 			break; 		
+ 		case 6:
+ 			day = '토요일';
+ 			break; 		
+ 		default:
+ 			day = "그런 요일은 없습니다."
+ 		}
+ 		document.write(day)
+ 	</script>
+  -->
+<!-- 
+ 	<script type="text/javascript">
+ 		for(x=2; x<=5; x++){
+ 			document.write("<b>--- [" + x + "단] ---</b><br>")
+ 			for(y=1; y<3; y++){
+ 				document.write(x + "*" + y + "=" + x*y + "<br>")
+ 			}
+ 		}
+ 	</script>
+ -->
+ 	<script type="text/javascript">
+ 		x = 1;
+ 		var sum = 0;
+ 		while(x<100){
+ 			sum+=x;
+ 			x++;
+ 		}
+ 		document.write("1~99 합 : " + sum)
+ 	</script>
+</body>
+</html>

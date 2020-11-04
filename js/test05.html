@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var city=['seoul','busan','incheon']
+		city[3]="test"
+		city[4]=12345
+		city[4]=1.111
+		function printArr(){
+			for(i=0; i<city.length; i++)
+				document.write(city[i]+"<br>")
+		}
+		printArr()
+		
+		document.write("<hr>")
+		joindata01 = city.join()
+		joindata02 = city.join('-')
+		joindata03 = city.join('그리고')
+		document.write(joindata01+"<br>")
+		document.write(joindata02+"<br>")
+		document.write(joindata03+"<br>")
+		
+		document.write("<hr>")
+		c = ['aaa','bbb']
+		data01 = city.concat('수원','오산')
+		data02 = city.concat(c)
+		document.write(data01+"<br>")
+		document.write(data02+"<hr>")
+		/*slice(부터,까지)*/
+		document.write(city.slice(0,3)+"<hr>")
+		
+		city = ['aaa','bbb']
+		/*push : 갯수표식*/
+		city.push('111','222')
+		document.write(city+"<br>")
+		/*pop : 마지막값 제외*/
+		city.pop()
+		document.write(city+"<br>")
+		/*unshift : 앞쪽에 추가*/
+		city.unshift('충주','강원도')
+		document.write(city+"<br>")
+		/*shift : 앞쪽에 추가되고 맨앞은 제외*/
+		city.shift()
+		document.write(city+"<hr>")
+		
+		city=['111','222','333','444']
+		function testArr(item, index){
+			document.write('city[' + index + '] => ' + item + "<br>")
+		}
+		city.forEach(testArr)
+		city = [1,2,3,4,5,10]
+		sum = 0
+		function testArr02(item){
+			sum += item
+		}
+		city.forEach(testArr02)
+		document.write('합 => ' + sum + "<br>")
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

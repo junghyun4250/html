@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	/*시작과 동시에 실행시키려면 body에 onload를 추가해줘야 합니다*/
+	function init(){
+		alert('초기화 작업을 진행 합니다')
+	}
+	</script>
+	<style type="text/css">
+		div{background-color: #d94a38; width: 12p0x; height: 50px;}
+	</style>
+	<script type="text/javascript">
+		function mOver(obj){
+			obj.innerHTML = "Thank You"
+		}
+		function mOut(obj){
+			obj.innerHTML = "Mouse Over me"
+		}
+	</script>
+</head>
+<body onload="init()">
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)">
+		Mouse Over Me!!!
+	</div>
+
+	<h1 onmouseover="style.color='red'" 
+						onmouseout="style.color='black'">
+		Mouse over this text				
+	</h1>
+</body>
+</html>
