@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 첫번쨰 방법 : google에 jquery검색 첫번쨰 링크에 들어가서 다운로드 경로로 가서  Download the compressed, production jQuery 3.5.1 를 프로젝트에 다운받아서 src로 외부파일을 불러와서 사용-->
+<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+<!-- 두번쨰 방법 : 다운로드했던 주소로 가서 링크를 불러옵니다 -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){ $("p").hide()})
+		$(".view").click(function(){ $("p").show()})
+	})
+/*
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("p").hide()
+		})
+	})
+	$().ready(function(){
+		$("button").click(function(){
+			$("p").hide()
+		})
+	})
+	$(function(){
+		$("button").click(function(){
+			$("p").hide()
+		})
+	})
+	원래 사용 방법 -> onclick 사용
+	function test(){
+		$("p").hide()
+	}
+	*/
+</script>
+</head>
+<body>
+	<p>메시지 : 제이쿼리</p>
+	<button type="button" onclick="test()">메시지 삭제</button>
+	<input type="button" class="view" value="클릭">
+</body>
+</html>

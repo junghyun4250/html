@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#remove{display: none;}
+	#remove.a{ display: block; background: yellow; width:100px;height:100px; position:absolute; left:100px; top:100px;}
+	#remove.b{ display: block; background: green; width:100px;height:100px; position:absolute; left:100px; top:100px;}
+	#remove.c{ display: block; background: pink; width:100px;height:100px; position:absolute; left:100px; top:100px;}
+	#remove.d{ display: block; background: red; width:100px;height:100px; position:absolute; left:100px; top:100px;}
+</style>
+<script type="text/javascript">
+	function init(){
+		btn1 = document.getElementById('1')
+		btn2 = document.getElementById('2')
+		btn3 = document.getElementById('3')
+		btn4 = document.getElementById('4')		
+		btn1.addEventListener('click',btnMsg)
+		btn2.addEventListener('click',btnMsg)
+		btn3.addEventListener('click',btnMsg)
+		btn4.addEventListener('click',btnMsg)
+	}
+	function btnMsg(){
+		document.getElementById("msg").innerText = "버튼 "+event.target.id+" 클릭";
+		let remove = document.getElementById('remove')
+		if(event.target.id == 1)
+			remove.setAttribute('class','a')
+		if(event.target.id == 2)
+			remove.setAttribute('class','b')
+		if(event.target.id == 3)
+			remove.setAttribute('class','c')
+		if(event.target.id == 4){
+			auto()
+		}
+	}
+	var blink
+	function deleteMSG(){
+		let remove = document.querySelector('#remove');
+    	remove.removeAttribute('class');
+    	clearTimeout(blink)
+	}
+	
+	var flag = true;
+	function auto(){
+		if(flag == true){
+			msg = document.querySelector('#remove');
+			msg.setAttribute('class','d');
+		}else{
+			msg = document.querySelector('#remove');
+			remove.removeAttribute('class');
+		}
+		flag = !flag;
+    	blink = setTimeout('auto()', 100);
+	}
+</script>
+</head>
+<body onload="init()">
+<div id="remove"><h3 id="msg"></h3></div>
+	<input type="button" id="1" value="버튼 1">
+	<input type="button" id="2" value="버튼 2">
+	<input type="button" id="3" value="버튼 3">
+	<input type="button" id="4" value="자동">
+	<input type="button" value="지우기" onclick="deleteMSG()">
+
+</body>
+</html>

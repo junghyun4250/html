@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	function pwchk() {
+		pw1 = document.getElementById("pw1").value;
+		pw2 = document.getElementById("pw2").value;
+		if (pw1 == pw2) {
+			document.getElementById("lbl_pw2").innerHTML = "확인!!";
+		} else {
+			document.getElementById("lbl_pw2").innerHTML = "불일치!!";
+			document.getElementById("pw1").value = "";
+			document.getElementById("pw2").value = "";
+			document.getElementById("pw1").focus();
+
+		}
+	}
+	function chkData() {
+		if (document.getElementById('id').value == "") {
+			alert("아이디는 필수 사항입니다.");
+		} else if (document.getElementById('pw1').value == "") {
+			alert("비밀번호는 필수 사항입니다.");
+		} else if (document.getElementById('pw2').value == "") {
+			alert("비밀번호 확인은 필수 사항입니다.");
+		} else {
+			fo.submit();
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>계정 등록 페이지 입니다.</h1>
+	<form id="fo" action="success.html" method='post'>
+		<input type="text" placeholder="아이디" id="id" name="id"><span
+			style="color: red">(*필수항목)</span><br> <input type="text"
+			id="pw1" placeholder="비밀번호" name="pwd"><span
+			style="color: red">(*필수 항목)</span><br> <input type="text"
+			id="pw2" placeholder="비밀번호 확인" onchange="pwchk()"> <label
+			id="lbl_pw2"></label><br> <input type="text" placeholder="이름"
+			name="name"><br>
+		<hr>
+		<input type="button" value="등록" onclick="chkData()">
+	</form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myFocus(){
+		/*클릭시 지정한 곳으로 포커스가 갑니다*/
+		document.getElementById('pw').focus()
+	}
+	function chk(){
+		put = document.getElementById('inPut').value;
+		document.getElementById('outPut').value = put;
+		document.getElementById('inPut').value = "";
+	}
+	function goForward(){
+		window.history.forward()
+	}
+	function goBack(){
+		window.history.forward()
+	}
+	function myClick(){
+		alert("안녕하세요. 환영합니다")
+		var result = confirm("처음 방문 입니까?")
+		if(result){
+			document.getElementById('myclick').innerHTML = "처음 방문해 주셔서 감사합니다"
+		}else{
+			document.getElementById('myclick').innerHTML = "다시 방문해 주셔서 감사합니다"
+		}
+	}
+	function popup(){
+		/*_self : 새로운창이 아닌 자기 자신의 창에서 이동이 됩니다*/
+		//window.open("https://www.naver.com","_self")
+		//window.open("https://www.naver.com","","width=500, height=500")
+		
+		/*popup.html 이라는 파일을 따로 만들어서 원하는 페이지를 작성해줍니다*/
+		window.open("popup.html","","width=500, height=500")
+	}
+	function test(){
+		//if()를 사용해서 걸러줍니다
+		//fo.submit()
+		
+		//<a>와 같은 기능
+		location.href="https://www.naver.com"
+	}
+</script>
+</head>
+<body>
+<!-- onclick에 직접적으로 넣어서 사용 가능 -->
+<input type="button" value="naver" onclick="location.href='test02.html'">
+	<form id="fo" action="test01.html" method="get">
+		이름<input type="text" name="n"><br>
+		주소<input type="text" name="a"><br>
+		<input type="submit" value="submit">
+		<!-- 내용을 꼭 입력해야할때 button을 사용해서 함수안에서 처리를 해줍니다 -->
+		<input type="button" value="btn" onclick="test()">
+	</form>
+<hr>
+	<input type="button" onclick="popup()" value="팝업">
+<hr>
+	<input type="button" onclick="myClick()"><br>
+	<p id="myclick"></p>
+<hr>
+	<a href="test01.html">다음페이지</a>
+	<button type="button" onclick="goBack()">이전</button>
+	<button type="button" onclick="goForward()">다음</button>
+<hr>
+	<input type="text" id="inPut" onchange="chk()"><br>
+	<input type="text" id="outPut"><br>
+	<input type="text"><br>
+<hr>
+	<form>
+		<input type="text" minlength="3" maxlength="8"><br>
+		<input type="text" id="pw"><br>
+		<input type="button" value="클릭" onclick="myFocus()">
+		<input type="submit" value="체크">
+	</form>
+</body>
+</html>

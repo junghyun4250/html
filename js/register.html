@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	span {color: red;}
+</style>
+<script type="text/javascript">
+	function pwcheck(){
+		msg = document.getElementById('msg')
+		if(document.getElementById('pw').value == document.getElementById('pwch').value){
+			msg.style.color = "black"
+			msg.innerHTML = "확인!!"
+		}else{
+			document.getElementById('pw').value = "";
+			document.getElementById('pwch').value = "";
+			msg.style.color = "black"
+			msg.innerHTML = "불일치!!"
+		}
+	}
+	function check(){
+		
+		if(document.getElementById('id').value == ""){
+			alert("아이디는 필수 사항힙니다")
+			document.getElementById('id').focus()
+		}else if(document.getElementById('pw').value == ""){
+			alert("비밀번호는 필수 사항입니다")
+			document.getElementById('pw').focus()
+		}else if(document.getElementById('pw').value != document.getElementById('pwch').value){
+			alert("비밀번호 확인은 필수 사항입니다")
+			document.getElementById('pw').focus()
+			document.getElementById('pw').value = "";
+			document.getElementById('pwch').value = "";
+		}else{
+			fo.submit()
+		}
+	}
+</script>
+</head>
+<body>
+<h1>회 원 가 입</h1>
+	<form id="fo" action="success.html" method="get">
+		<input type="text" placeholder="아이디" name="id" id="id"><span>(*필수항목)</span><br>
+		<input type="text" placeholder="비밀번호" name="pw" id="pw"><span>(*필수항목)</span><br>
+		<input type="text" placeholder="비밀번호 확인" name="pwch" id="pwch" onchange="pwcheck()"><span id="msg">(*필수항목)</span><br>
+		<input type="text" placeholder="이름"><br>
+		<hr>
+		<input type="button" value="등록" onclick="check()">
+	</form>
+</body>
+</html>

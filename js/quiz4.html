@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#list {position: fixed; right: 30px; top: 10px; width: 100px; }
+	#msg { text-align: center; background-color: red;}
+	img { width: 100px; height: 100px;}
+</style>
+
+<script type="text/javascript">
+	var img;
+	var arr=[];
+	function display(picName){
+		if(arr.length == 0)
+			list()
+		arr.push(picName);
+		imgList = document.getElementById("imgList")
+		if(arr.length <= 5){
+			img = document.createElement('img')
+			img.setAttribute('src','images/'+picName+'.jpg')
+			img.setAttribute('width',100)
+			img.setAttribute('height',100)
+			document.getElementById('imgList').appendChild(img)
+		}
+		else{
+			imgList.innerHTML = ''
+			arr.shift();
+			for(i=0;i<arr.length;i++){
+	   			var img=document.createElement('img'); 
+	   			img.src="images/"+ arr[i] +".jpg";
+	   	        document.getElementById("imgList").appendChild(img)
+   			}
+		}		
+	}
+	function list(){
+		msg = document.getElementById("msg")
+    	msg.innerHTML="최근 구경한 상품"
+    	msg.style.background="green"
+    }
+</script>
+</head>
+<body>
+<div id="list" >
+	<h3 id="msg">목록이<br>없습니다</h3>
+	<div id="imgList"></div>
+</div>
+	<table border='1' align=center>
+		<tr>
+			<th><a href="#" onclick="display('최근상품01')"><img src="images/최근상품01.jpg"></a></th>
+			<th><a href="#" onclick="display('최근상품02')"><img src="images/최근상품02.jpg"></a></th>
+			<th><a href="#" onclick="display('최근상품03')"><img src="images/최근상품03.jpg"></a></th>
+			<th><a href="#" onclick="display('최근상품04')"><img src="images/최근상품04.jpg"></a></th>
+		</tr>
+		<tr>
+			<th><a href="#" onclick="display('최근상품05')"><img src="images/최근상품05.jpg"></a></th>
+			<th><a href="#" onclick="display('최근상품06')"><img src="images/최근상품06.jpg"></a></th>
+			<th><a href="#" onclick="display('최근상품07')"><img src="images/최근상품07.jpg"></a></th>
+			<th><a href="#" onclick="display('최근상품08')"><img src="images/최근상품08.jpg"></a></th>
+		</tr>
+		
+	</table>
+</body>
+</html>
